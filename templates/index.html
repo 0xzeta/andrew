@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+<body>
+	<div class="main_div">
+	<h1>World Factbook</h1>
+		<div>There are {{w_txt|length}} countries in in the world.</div>
+		<ul>
+			{% for coty in w_txt %}
+			<li><a href='/countryname/{{coty.name}}'>
+				<img src='/static/flags/{{coty["tld"]}}.gif' class='tiny'>
+			 {{coty.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<div class='nav_button'>
+			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+		</div>
+		<div class='nav_button'>
+			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+<body>
+	<div class="con_main">
+	<h1>{{c}}</h1>
+	<div>There are {{length_of_cl}} countries in {{c}}</div>
+	<ul>
+		{% for coty in cl %}
+			<li>
+				<div class="properties_small">
+				<a href='/countryname/{{coty.name}}'>
+					<div>
+						<img src='/static/flags/{{coty.tld}}.gif' class='tiny'>
+					</div>
+					<div>
+						{{coty['name']}}
+					</div>
+				</a>
+				</div>
+		</li>
+		{% endfor %}
+	</ul>
+	</div>
+</body>
+</html>

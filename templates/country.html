@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+<body>
+	<div class="c_main">
+	<h1>{{coty['name']}}</h1>
+		<div class="country_div">
+					<img src="../static/flags/{{coty['tld']}}.gif" class='big'>
+			<div>
+				<div>Capital</div>
+				<div>{{coty['capital']}}</div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><a href='../continent/{{coty.continent}}'>{{coty['continent']}}</a></div>
+			</div>
+			<div>
+				<div>Population</div>
+				<div>{{(coty['population'])}}</div>
+			</div>
+			<div>
+				<div>Area</div>
+				<div>{{	(coty['area'])}}</div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div>{{ (coty['gdp']) }}</div>
+			</div>
+			<div>
+				<div>Top Level Domain</div>
+				<div>{{coty['tld']}}</div>
+			</div>
+			<div>
+				<br>
+				<div><a href='/editcountryByName/{{coty.name}}'><input type="button" value="Edit"></a>
+				<a href='/delete/{{coty.name}}'> <input type="button" value="Delete"> </a> 
+				<a href='/newcountry'> <input type="button" value="Create"> </a> </div>
+			</div>
+		
+		
+		</div>
+	</div>
+</body>
+</html>

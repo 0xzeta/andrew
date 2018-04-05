@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<div class="cd_main">
+	   <form action='/updatecountrybyname'>
+		<h1>{{coty['name']}}</h1>
+		<div class='country_div'>
+			<img src="/static/flags/{{coty['tld']}}.gif" class='big'>
+			<div>
+				<div><input name='name' value={{coty['name']}} type="hidden"></div>
+			</div>
+			<div>
+				<div>Capital</div>
+				<div><input name='capital' value={{coty['capital']}}></div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><input name='continent' value={{coty['continent']}}></div>
+			</div>
+			<div>
+				<div>Population</div>
+				<div><input name='population' value={{coty['population']}}></div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div><input name='gdp' value={{coty['gdp']}}></div>
+			</div>
+			<div>
+				<div>Area</div>
+				<div><input name='area' value={{coty['area']}}></div>
+			</div>
+			<div>
+				<div>Top Level Domain</div>
+				<div>{{coty['tld']}}</div>
+			</div>
+		</div>
+		<br>	
+		<div class="sub">
+			<input type='submit'>
+		    <a href='/delete/{{coty.name}}'><input type="button" value="Delete"> </a>
+		 </div>
+		</form>
+	</div>
+	</body>
+</html>

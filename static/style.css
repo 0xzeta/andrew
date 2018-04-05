@@ -1,0 +1,92 @@
+body{
+    font-family:arial;
+}
+img.tiny{
+    width: 20px;
+    border: solid thin grey;    
+}
+img.big {
+    width: 150px;
+    border: solid thin grey;
+    display:inline-block;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+}
+a:hover{
+    background-color: #A4F5BC;
+    color: black;
+}
+
+.properties_small div {
+    display:inline-block;
+}
+.properties_small div:first-child{
+    width:3ex;
+}
+a{
+    text-decoration: none;
+}
+.c_last{
+    padding-right: 100px; 
+}
+.nav_button{
+    background-color: white; /* Green */
+    border: solid thin black;
+    color: green;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    }
+
+
+.country_div div div{
+    display:inline-block;
+    margin: 10px;
+}
+.country_div div div:first-child{
+    width:20ex;
+} 
+.country_div div div:last-child{
+    font-weight: bold;
+}
+
+.c-edit{
+   background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.main_div{
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    border: 2px solid black;
+}
+.c_main{
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    border: 2px solid black;
+}
+.cd_main{
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    border: 2px solid black;
+}
+.con_main{
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    border: 2px solid black;
+}
