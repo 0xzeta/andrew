@@ -43,7 +43,17 @@ a{
     display: inline-block;
     font-size: 13px;
     }
-
+.nav_create{
+    background-color: white; /* Green */
+    border: solid thin black;
+    color: green;
+    margin-top: 10px;
+    width: 160px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    }
 
 .country_div div div{
     display:inline-block;
