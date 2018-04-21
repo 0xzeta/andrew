@@ -135,7 +135,7 @@ def createcountryByNamePage():
 ######################################################################################
     
 if (__name__=='__main__'):
-    app.run(host='0.0.0.0',port=5621,debug=True)#default port is 5000
+    app.run(host='0.0.0.0',port=5620,debug=True)#default port is 5000
 
 '''
 @app.route('/awh/<i>')# 'i' is parameter
