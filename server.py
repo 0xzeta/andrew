@@ -12,8 +12,8 @@ page_size=10
 def mainpage():
     '''It is the main page where all the country are shown
     page by page'''
-    return render_template('index.html',
-            page_number=0,                              #pass data to webpage
+    return render_template('index.html',                #pass data to webpage
+            page_number=0,              
             page_size=page_size,
             w_txt = w_txt[0:page_size]
             )

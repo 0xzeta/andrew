@@ -14,12 +14,25 @@
 			 {{coty.name}}</a></li>
 			{% endfor %}
 		</ul>
+		<div class="pag_main1">
+			<tr class="pagination">
+				<td><a href="#">A</a></td>
+				<td><a href="#">B</a></td>
+				<td><a href="#">C</a></td>
+				<td><a href="#">D</a></td>
+				<td><a >.........</a></td>
+				<td><a href="#">Z</a></td>
+
+			</tr>
+		</div>
+		<br>
 		<div class='nav_button'>
 			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
 		</div>
 		<div class='nav_button'>
 			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
 		</div>
+		
 		<div class='nav_create'><a href='/newcountry'> Create New Country </a></div>
 	</div>
 </body>

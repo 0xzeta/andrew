@@ -39,12 +39,13 @@ a{
     color: green;
     padding: 5px 15px;
     text-align: center;
+    margin-top: 10px;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
     }
 .nav_create{
-    background-color: white; /* Green */
+    background-color: white;
     border: solid thin black;
     color: green;
     margin-top: 10px;
@@ -52,6 +53,16 @@ a{
     padding: 5px 15px;
     text-align: center;
     text-decoration: none;
+    font-size: 13px;
+    }
+
+.pag_main1{
+    background-color: white; /* Green */
+    border: solid thin black;
+    color: green;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: inline-block;
     font-size: 13px;
     }
 
