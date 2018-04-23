@@ -45,8 +45,8 @@ def countrypage(i):
 @app.route('/countryname/<n>')                          #specific path of address that path associate with this function
 def countrynamepage(n):
     '''It show the detail about country by country name'''
-    return render_template('country.html',
-            coty = next(x for x in w_txt if x['name']==n), )#passed the result to web template
+    return render_template('country.html',              #passed the result to web template
+            coty = next(x for x in w_txt if x['name']==n), )
 
 ######################################################################################
 
@@ -61,13 +61,24 @@ def continentpage(c):
 
 ######################################################################################
 
+@app.route('/startwith/<c>')                            #specific path of address that path associate with this function
+def letterpage(c):
+    '''It show each continent's all country'''
+    cl = [coty for coty in w_txt if coty['name'][0]==c]   
+    return render_template('continent.html',            #passed the result to web template
+            length_of_cl = len(cl),
+            cl = cl,
+            c = c)
+
+######################################################################################
+
 @app.route('/delete/<n>')                               #specific path of address that path associate with this function
 def deleteCountryPage(n):
     '''It will delete the page when we click the delet button.
      All deleted country will be back on the list after restarting the server'''
     i=0
     for coty in w_txt:
-        if coty['name'] == n:                           #Delete the country when the 'name' is equal with 's'
+        if coty['name'] == n:                           #Delete the country when the 'name' is equal with 'n'
             break
         i+=1
 
