@@ -1,15 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-<body>
+
+
 	<div class="con_main">
 	<h1>{{c}}</h1>
+	<div class="continent" >
+		<ul>
+		<div><a href='../eachcontinent/Asia'>Asia</a></div> 
+		<div> | </div>
+		<div><a href='../eachcontinent/Caribbean'>Caribbean</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Eurasia'>Eurasia</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Oceania'>Oceania</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/North America'>North America</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Europe'>Europe</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/South America'>South America</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Africa'>Africa</a></div>
+		</ul>
+	</div>
 	<div>There are {{length_of_cl}} countries in {{c}}</div>
-	<ul>
+		
+		{% extends "base.html" %}
+		{% block content %}
+
+	
 		{% for coty in cl %}
-			<li>
+			
 				<div class="properties_small">
 				<a href='/countryname/{{coty.name}}'>
 					<div>
@@ -20,9 +39,9 @@
 					</div>
 				</a>
 				</div>
-		</li>
+		
 		{% endfor %}
-	</ul>
+	
+
 	</div>
-</body>
-</html>
+{% endblock %}

@@ -64,7 +64,8 @@ def eachcontinentpage(c):
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
-            c = c)
+            c = c,
+            lota = lota)
 
 ######################################################################################
 
@@ -75,7 +76,8 @@ def continentpage(c):
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
-            c = c)
+            c = c,
+            lota = lota)
 
 ######################################################################################
 
