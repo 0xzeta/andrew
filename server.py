@@ -28,7 +28,7 @@ def mainpage():
 @app.route('/begin/<b>')                                #specific path of address that path associate with this function
 def beginpage(b):
     '''This function mean which will work when we click next
-    or previous. It plus the page number 20.'''
+    or previous. It plus the page number 10.'''
     nb = int(b)                                         # initial make the 'b' as int
     return render_template('index.html',
             w_txt = w_txt[nb:nb+page_size],
@@ -59,7 +59,7 @@ def countrynamepage(n):
 
 @app.route('/eachcontinent/<c>')                            #specific path of address that path associate with this function
 def eachcontinentpage(c):
-    '''It show each continent's all country'''
+    '''It show each continent's all country list'''
     cl = [coty for coty in w_txt if coty['continent']==c]   
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
@@ -71,7 +71,7 @@ def eachcontinentpage(c):
 
 @app.route('/continent/<c>')                            #specific path of address that path associate with this function
 def continentpage(c):
-    '''It show each continent's all country'''
+    '''It show each continent's all country list'''
     cl = [coty for coty in w_txt if coty['continent']==c]   
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
@@ -83,7 +83,7 @@ def continentpage(c):
 
 @app.route('/startwith/<c>')                            #specific path of address that path associate with this function
 def letterpage(c):
-    '''It show each continent's all country'''
+    '''Show the country if the country's first letter is same with user instruction'''
     cl = [coty for coty in w_txt if coty['name'][0]==c]   
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
@@ -95,8 +95,8 @@ def letterpage(c):
 
 @app.route('/delete/<n>')                               #specific path of address that path associate with this function
 def deleteCountryPage(n):
-    '''It will delete the page when we click the delet button.
-     All deleted country will be back on the list after restarting the server'''
+    '''It will delete the page when user click the delet button.
+     All deleted country will be back to the list after restarting the server'''
     i=0
     for coty in w_txt:
         if coty['name'] == n:                           #Delete the country when the 'name' is equal with 'n'

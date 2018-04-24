@@ -21,12 +21,12 @@
 		<div><a href='../eachcontinent/Africa'>Africa</a></div>
 		</ul>
 	</div>
-	<div>There are {{length_of_cl}} countries in {{c}}</div>
-		
-		{% extends "base.html" %}
+	{% extends "base.html" %}
 		{% block content %}
 
-	
+	<div>There are {{length_of_cl}} countries in {{c}}</div>
+	<br>
+		
 		{% for coty in cl %}
 			
 				<div class="properties_small">

@@ -48,6 +48,8 @@ a{
 .continent div{
     display: inline-block;
     text-decoration: none;
+    align-self: center;
+
 }
 .nav_create{
     background-color: white;
@@ -109,7 +111,7 @@ a{
 .c_main{
     padding: 20px;
     margin: auto;
-    width: 50%;
+    width: 60%;
     border: 2px solid black;
 }
 .cd_main{
