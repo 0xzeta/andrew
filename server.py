@@ -4,7 +4,6 @@ import json
 page_size=10
 w_txt= json.load(open('worldl.json'))
 lota = sorted(list(set([c['name'][0] for c in w_txt]))) #get the first unique character from the json file
-print(lota)
 
 for coty in w_txt:
     coty['tld'] = coty['tld'][1:]
