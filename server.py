@@ -33,7 +33,8 @@ def beginpage(b):
     return render_template('index.html',
             w_txt = w_txt[nb:nb+page_size],
             page_number = nb,
-            page_size = page_size
+            page_size = page_size,
+            lota = lota
             )
 
 ######################################################################################
