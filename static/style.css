@@ -17,7 +17,7 @@ a{
     padding: 5px 10px;
 }
 a:hover{
-    background-color: #A4F5BC;
+    background-color: #C8FFFF;
     color: black;
 }
 
@@ -44,6 +44,11 @@ a{
     display: inline-block;
     font-size: 13px;
     }
+
+.continent div{
+    display: inline-block;
+    text-decoration: none;
+}
 .nav_create{
     background-color: white;
     border: solid thin black;
@@ -59,12 +64,14 @@ a{
 .pag_main1{
     background-color: white; /* Green */
     border: solid thin black;
-    color: green;
     padding: 5px 15px;
     text-decoration: none;
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px; 
     }
+
+
+
 
 .country_div div div{
     display:inline-block;
@@ -90,7 +97,7 @@ a{
 .main_div{
     padding: 20px;
     margin: auto;
-    width: 55%;
+    width: 54%;
     border: 2px solid black;
 }
 .c_main{

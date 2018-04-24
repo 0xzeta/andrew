@@ -6,6 +6,26 @@
 <body>
 	<div class="main_div">
 	<h1>World Factbook</h1>
+	<div class="continent" >
+		<ul>
+		<div><a href='../eachcontinent/Asia'>Asia</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Caribbean'>Caribbean</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Eurasia'>Eurasia</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Oceania'>Oceania</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/North America'>North America</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Europe'>Europe</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/South America'>South America</a></div>
+		<div> | </div>
+		<div><a href='../eachcontinent/Africa'>Africa</a></div>
+		</ul>
+	</div>
+
 		<div>There are {{w_txt|length}} countries in in the world.</div>
 		<ul>
 			{% for coty in w_txt %}
@@ -14,7 +34,7 @@
 			 {{coty.name}}</a></li>
 			{% endfor %}
 		</ul>
-		
+
 		<!-- <div class="pag_main1">
 			<tr class="pagination">
 				<td><a href="startwith/A">A</a></td>
@@ -26,11 +46,11 @@
 
 			</tr>
 		</div> -->
-
+		
 		<div class="pag_main1">
 			<tr class="pagination">
 				{% for le in lota %}
-				<a href="/startwith/{{le}}">{{le}}</a>
+				<a class="pg_a" href="/startwith/{{le}}">{{le}}</a>
 				{% endfor %}
 			</tr>
 		</div>

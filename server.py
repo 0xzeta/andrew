@@ -56,6 +56,18 @@ def countrynamepage(n):
 
 ######################################################################################
 
+
+@app.route('/eachcontinent/<c>')                            #specific path of address that path associate with this function
+def eachcontinentpage(c):
+    '''It show each continent's all country'''
+    cl = [coty for coty in w_txt if coty['continent']==c]   
+    return render_template('continent.html',            #passed the result to web template
+            length_of_cl = len(cl),
+            cl = cl,
+            c = c)
+
+######################################################################################
+
 @app.route('/continent/<c>')                            #specific path of address that path associate with this function
 def continentpage(c):
     '''It show each continent's all country'''
