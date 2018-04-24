@@ -20,7 +20,8 @@ def mainpage():
     return render_template('index.html',                #pass data to webpage
             page_number=0,              
             page_size=page_size,
-            w_txt = w_txt[0:page_size]
+            w_txt = w_txt[0:page_size],
+            lota = lota
             )
 
 ######################################################################################
@@ -73,7 +74,8 @@ def letterpage(c):
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
-            c = c)
+            c = c,
+            lota = lota)
 
 ######################################################################################
 

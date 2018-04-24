@@ -14,7 +14,8 @@
 			 {{coty.name}}</a></li>
 			{% endfor %}
 		</ul>
-		<div class="pag_main1">
+		
+		<!-- <div class="pag_main1">
 			<tr class="pagination">
 				<td><a href="startwith/A">A</a></td>
 				<td><a href="startwith/B">B</a></td>
@@ -23,6 +24,14 @@
 				<td><a >.........</a></td>
 				<td><a href="startwith/Z">Z</a></td>
 
+			</tr>
+		</div> -->
+
+		<div class="pag_main1">
+			<tr class="pagination">
+				{% for le in lota %}
+				<a href="/startwith/{{le}}">{{le}}</a>
+				{% endfor %}
 			</tr>
 		</div>
 		<br>
