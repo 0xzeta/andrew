@@ -91,7 +91,24 @@ a{
 .country_div div div:last-child{
     font-weight: bold;
 }
-
+.home{
+    padding-left: 400px;
+}
+.home2{
+        text-decoration: none;
+    display: inline-block;
+    padding-left: 600px;
+}
+.home3{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 600px;
+}
+.home3{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 750px;
+}
 .c-edit{
    background-color: #4CAF50; /* Green */
     border: none;
@@ -111,19 +128,19 @@ a{
 .c_main{
     padding: 20px;
     margin: auto;
-    width: 60%;
+    width: 55%;
     border: 2px solid black;
 }
 .cd_main{
     padding: 20px;
     margin: auto;
-    width: 50%;
+    width: 55%;
     border: 2px solid black;
 }
 .con_main{
     padding: 20px;
     margin: auto;
-    width: 60%;
+    width: 55%;
     border: 2px solid black;
 }
 
