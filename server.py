@@ -122,7 +122,6 @@ def editcountryByNamePage(n):
 		'country-edit.html',
 		coty = coty)
 
-######################################################################################
     
 @app.route('/updatecountrybyname')                      #specific path of address that path associate with this function
 def updatecountryByNamePage():
@@ -147,7 +146,9 @@ def updatecountryByNamePage():
 def newcountrypage():
     '''Initial define the coty none and pass to other'''
     coty = None
-    return render_template('country-create.html',coty = coty)#Pass this result to the web template
+    return render_template(
+                  'country-create.html',
+                  coty = coty)#Pass this result to the web template
 
 @app.route('/createcountryByNamePage')
 def createcountryByNamePage():
