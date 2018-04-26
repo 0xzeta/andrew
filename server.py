@@ -4,7 +4,7 @@ import json
 page_size=10
 w_txt= json.load(open('worldl.json'))
 lota = sorted(list(set([c['name'][0] for c in w_txt]))) #get the first unique character from the json file
-
+t_length = len(w_txt)
 for coty in w_txt:
     coty['tld'] = coty['tld'][1:]
 app = Flask(__name__)                                   #creat an flask object or create an server
@@ -20,6 +20,7 @@ def mainpage():
             page_number=0,              
             page_size=page_size,
             w_txt = w_txt[0:page_size],
+            t_length = len(w_txt),
             lota = lota
             )
 
@@ -34,6 +35,7 @@ def beginpage(b):
             w_txt = w_txt[nb:nb+page_size],
             page_number = nb,
             page_size = page_size,
+            t_length = len(w_txt),
             lota = lota
             )
 
@@ -43,6 +45,7 @@ def beginpage(b):
 def countrypage(i):
     '''It show the detail about country by country number'''
     return render_template('country.html',              #passed to web template
+            t_length = len(w_txt),
             coty = w_txt[int(i)]
             )                                               
 
@@ -52,7 +55,8 @@ def countrypage(i):
 def countrynamepage(n):
     '''It show the detail about country by country name'''
     return render_template('country.html',              #passed the result to web template
-            coty = next(x for x in w_txt if x['name']==n), )
+            t_length = len(w_txt),
+            coty = next(x for x in w_txt if x['name']==n))
 
 ######################################################################################
 
@@ -65,6 +69,7 @@ def eachcontinentpage(c):
             length_of_cl = len(cl),
             cl = cl,
             c = c,
+            t_length = len(w_txt),
             lota = lota)
 
 ######################################################################################
@@ -77,6 +82,7 @@ def continentpage(c):
             length_of_cl = len(cl),
             cl = cl,
             c = c,
+            t_length = len(w_txt),
             lota = lota)
 
 ######################################################################################
@@ -89,6 +95,7 @@ def letterpage(c):
             length_of_cl = len(cl),
             cl = cl,
             c = c,
+            t_length = len(w_txt),
             lota = lota)
 
 ######################################################################################
@@ -104,9 +111,12 @@ def deleteCountryPage(n):
         i+=1
 
     del w_txt[i]
+    
     return render_template('index.html',                #Pass this result to the web template
             page_number=0,
             page_size=page_size,
+            lota = lota,
+            t_length = len(w_txt),
             w_txt = w_txt[0:page_size])
 
 ######################################################################################
@@ -120,6 +130,7 @@ def editcountryByNamePage(n):
             coty = x
     return render_template(                             #Pass this result to the web template
 		'country-edit.html',
+                t_length = len(w_txt),
 		coty = coty)
 
     
@@ -133,11 +144,12 @@ def updatecountryByNamePage():
             coty = x
     coty['capital']=request.args.get('capital')         #Request the capital data from user
     coty['continent']=request.args.get('continent')     #Request the continent data from user
-    coty['population']=request.args.get('population')   #Request the population data from user
-    coty['gdp']=request.args.get('gdp')                 #Request the gdp data from user
-    coty['area']=request.args.get('area')               #Request the area data from user
+    coty['population']=int(request.args.get('population'))   #Request the population data from user
+    coty['gdp']=int(request.args.get('gdp'))                 #Request the gdp data from user
+    coty['area']=int(request.args.get('area'))               #Request the area data from user
     return render_template(                             #Pass this result to the web template
 		'country.html',
+                t_length = len(w_txt),
 		coty = coty)
 
 ######################################################################################
@@ -145,24 +157,25 @@ def updatecountryByNamePage():
 @app.route('/newcountry')                                    #specific path of address that path associate with this function
 def newcountrypage():
     '''Initial define the coty none and pass to other'''
-    coty = None
     return render_template(
-                  'country-create.html',
-                  coty = coty)#Pass this result to the web template
+                  'country-create.html')
 
 @app.route('/createcountryByNamePage')
 def createcountryByNamePage():
     '''Request the data from user to create new country'''
+    coty = {}
     coty['name']=request.args.get('name')               #Request the name data from user
     coty['capital']=request.args.get('capital')         #Request the capital data from user
     coty['continent']=request.args.get('continent')     #Request the continent data from user
-    coty['population']=request.args.get('population')   #Request the population data from user
-    coty['gdp']=request.args.get('gdp')                 #Request the gdp data from user
-    coty['area']=request.args.get('area')               #Request the area data from user
+    coty['population']=int(request.args.get('population'))   #Request the population data from user
+    coty['gdp']=int(request.args.get('gdp'))                 #Request the gdp data from user
+    coty['area']=int(request.args.get('area'))               #Request the area data from user
     coty['tld']=request.args.get('tld')                 #Request the tld data from user
+    w_txt.append(coty)
     w_txt.sort(key=lambda coty: coty['name'])           #sort the data
     return render_template(                             #Pass this result to the web template
 		'country.html',
+                t_length = len(w_txt),
 		coty = coty)
     
 ######################################################################################

@@ -8,25 +8,25 @@
 	<h1>World Factbook</h1>
 	<div class="continent" >
 		<ul>
-		<div><a href='../eachcontinent/Asia'>Asia</a></div> 
+		<div><a href='../eachcontinent/Asia'><b>Asia</b></a></div> 
 		<div> | </div>
-		<div><a href='../eachcontinent/Caribbean'>Caribbean</a></div>
+		<div><a href='../eachcontinent/Caribbean'><b>Caribbean</b></a></div>
 		<div> | </div>
-		<div><a href='../eachcontinent/Eurasia'>Eurasia</a></div>
+		<div><a href='../eachcontinent/Eurasia'><b>Eurasia</b></a></div>
 		<div> | </div>
-		<div><a href='../eachcontinent/Oceania'>Oceania</a></div>
+		<div><a href='../eachcontinent/Oceania'><b>Oceania</b></a></div>
 		<div> | </div>
-		<div><a href='../eachcontinent/North America'>North America</a></div>
+		<div><a href='../eachcontinent/North America'><b>North America</b></a></div>
 		<div> | </div>
-		<div><a href='../eachcontinent/Europe'>Europe</a></div>
+		<div><a href='../eachcontinent/Europe'><b>Europe</b></a></div>
 		<div> | </div>
-		<div><a href='../eachcontinent/South America'>South America</a></div>
+		<div><a href='../eachcontinent/South America'><b>South America</b></a></div>
 		<div> | </div>
-		<div><a href='../eachcontinent/Africa'>Africa</a></div>
+		<div><a href='../eachcontinent/Africa'><b>Africa</b></a></div>
 		</ul>
 	</div>
 
-		<div>There are {{w_txt|length}} countries in in the world.</div>
+		<div>There are {{t_length}} countries in in the world.</div>
 		
 		<ul>
 			{% for coty in w_txt %}
@@ -62,8 +62,8 @@
 		<div class='nav_button'>
 			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
 		</div>
-		
-		<div class='nav_create'><a href='/newcountry'> Create New Country </a></div>
+		<div class='nav_button' style="margin-left: 38.8%;"><a href='/newcountry'> Create New Country </a></div>
+
 	</div>
 </body>
 </html>
