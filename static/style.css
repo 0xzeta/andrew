@@ -94,12 +94,14 @@ a{
     font-weight: bold;
 }
 .home{
+    text-decoration: none;
+    display: inline-block;
     padding-left: 400px;
 }
 .home2{
-        text-decoration: none;
+    text-decoration: none;
     display: inline-block;
-    padding-left: 600px;
+    padding-left: 500px;
 }
 .home3{
     text-decoration: none;
@@ -109,7 +111,7 @@ a{
 .home4{
     text-decoration: none;
     display: inline-block;
-    padding-left: 750px;
+    padding-left: 700px;
 }
 .c-edit{
    background-color: #4CAF50; /* Green */
@@ -124,13 +126,13 @@ a{
 .main_div{
     padding: 20px;
     margin: auto;
-    width: 54%;
+    width: 60%;
     border: 2px solid black;
 }
 .c_main{
     padding: 20px;
     margin: auto;
-    width: 55%;
+    width: 60%;
     border: 2px solid black;
 }
 .cd_main{
@@ -142,7 +144,7 @@ a{
 .con_main{
     padding: 20px;
     margin: auto;
-    width: 55%;
+    width: 60%;
     border: 2px solid black;
 }
 
