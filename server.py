@@ -1,4 +1,4 @@
- from flask import Flask, render_template, request
+from flask import Flask, render_template, request
 import json
 
 page_size=10
@@ -182,9 +182,3 @@ def createcountryByNamePage():
     
 if (__name__=='__main__'):
     app.run(host='0.0.0.0',port=5620,debug=True)#default port is 5000
-
-'''
-@app.route('/awh/<i>')# 'i' is parameter
-def awhpage(i):
-    return w_txt[int(i)]['name']+'  '+w_txt[int(i)]['continent']+'  '+w_txt[int(i)]['capital'] 
-'''
