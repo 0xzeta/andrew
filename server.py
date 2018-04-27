@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+ from flask import Flask, render_template, request
 import json
 
 page_size=10
@@ -31,7 +31,7 @@ def beginpage(b):
     '''This function mean which will work when we click next
     or previous. It plus the page number 10.'''
     nb = int(b)                                         # initial make the 'b' as int
-    return render_template('index.html',
+    return render_template('index.html',                # redirect to webpage
             w_txt = w_txt[nb:nb+page_size],
             page_number = nb,
             page_size = page_size,
@@ -42,7 +42,7 @@ def beginpage(b):
 ######################################################################################
 
 @app.route('/country/<i>')                              #specific path of address that path associate with this function
-def countrypage(i):
+def countrypage(i):                                     #create def
     '''It show the detail about country by country number'''
     return render_template('country.html',              #passed to web template
             t_length = len(w_txt),
@@ -61,10 +61,10 @@ def countrynamepage(n):
 ######################################################################################
 
 
-@app.route('/eachcontinent/<c>')                            #specific path of address that path associate with this function
+@app.route('/eachcontinent/<c>')                        #specific path of address that path associate with this function
 def eachcontinentpage(c):
     '''It show each continent's all country list'''
-    cl = [coty for coty in w_txt if coty['continent']==c]   
+    cl = [coty for coty in w_txt if coty['continent']==c] #checking the user input and output result when user input is true
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
