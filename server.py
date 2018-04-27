@@ -64,7 +64,7 @@ def countrynamepage(n):
 @app.route('/eachcontinent/<c>')                        #specific path of address that path associate with this function
 def eachcontinentpage(c):
     '''It show each continent's all country list'''
-    cl = [coty for coty in w_txt if coty['continent']==c] #checking the user input and output result when user input is true
+    cl = [coty for coty in w_txt if coty['continent']==c] #checking the user input and output the result when user data 'c' is true with coty['continent']
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
@@ -77,7 +77,7 @@ def eachcontinentpage(c):
 @app.route('/continent/<c>')                            #specific path of address that path associate with this function
 def continentpage(c):
     '''It show each continent's all country list'''
-    cl = [coty for coty in w_txt if coty['continent']==c]   
+    cl = [coty for coty in w_txt if coty['continent']==c] #checking the user input and output the result when user data 'c' is true with couty['continent']
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
@@ -90,7 +90,7 @@ def continentpage(c):
 @app.route('/startwith/<c>')                            #specific path of address that path associate with this function
 def letterpage(c):
     '''Show the country if the country's first letter is same with user instruction'''
-    cl = [coty for coty in w_txt if coty['name'][0]==c]   
+    cl = [coty for coty in w_txt if coty['name'][0]==c] #pass the data if first letter of user data is same with json file 'name[0]'
     return render_template('continent.html',            #passed the result to web template
             length_of_cl = len(cl),
             cl = cl,
@@ -106,7 +106,7 @@ def deleteCountryPage(n):
      All deleted country will be back to the list after restarting the server'''
     i=0
     for coty in w_txt:
-        if coty['name'] == n:                           #Delete the country when the 'name' is equal with 'n'
+        if coty['name'] == n:                           #Delete the country when the 'name' is equal with user data 'n' parameter
             break
         i+=1
 
